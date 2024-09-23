@@ -9,10 +9,8 @@ import shutil
 NODE_CLASS_MAPPINGS = {}
 NODE_DISPLAY_NAME_MAPPINGS = {}
 
-import comfy, inspect
-
 python = sys.executable
-extentions_folder = os.path.join(os.path.dirname(os.path.realpath(inspect.getfile(comfy))),
+extentions_folder = os.path.join(os.path.dirname(os.path.realpath(__file__),
                                  "web" + os.sep + "extensions" + os.sep + "dzNodes")
 javascript_folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), "js")
 outdate_file_list = ['comfy_shared.js', 'debug.js', 'mtb_widgets.js', 'parse-css.js', 'dz_widgets.js']
