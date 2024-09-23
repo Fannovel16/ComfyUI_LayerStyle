@@ -10,14 +10,14 @@ NODE_CLASS_MAPPINGS = {}
 NODE_DISPLAY_NAME_MAPPINGS = {}
 
 python = sys.executable
-extentions_folder = os.path.join(os.path.dirname(os.path.realpath(__main__.__file__)),
+extentions_folder = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                  "web" + os.sep + "extensions" + os.sep + "dzNodes")
 javascript_folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), "js")
 outdate_file_list = ['comfy_shared.js', 'debug.js', 'mtb_widgets.js', 'parse-css.js', 'dz_widgets.js']
 
 if not os.path.exists(extentions_folder):
     print('# 😺dzNodes: Making the "web\extensions\dzNodes" folder')
-    os.mkdir(extentions_folder)
+    os.makedirs(extentions_folder)
 else:
     for i in outdate_file_list:
         outdate_file = os.path.join(extentions_folder, i)
